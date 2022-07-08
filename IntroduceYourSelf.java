@@ -13,8 +13,7 @@ public class IntroduceYourSelf{
      System.out.print("Your Course?:");
      String course = _scan.nextLine();
      _scan.close();
-     
-     System.out.println(fname + " " + lname + " " + course);
+     System.out.printf("Your name is %s %s and is currently taking %s", fname, lname, course);
 
     }
 }
