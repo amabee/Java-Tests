@@ -1,7 +1,5 @@
-public class Main {
-    
-}
 import java.util.Scanner;
+
 public class Word_Reverser {
 
     public static void main(String[] args) {
