@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class JavaSampleProj{
+public class Java_Multiplication_Table{
     
     /*
      * This is a sample java console program
