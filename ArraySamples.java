@@ -133,3 +133,66 @@ class PlayingWithArray {
         System.out.println("Student Time: " + time[4] + '\n');
     }
 }
+
+class ArrayLooping{
+        public static void main(String...args){
+            String []names = {"Haruka", "Ikura", "Sakura", "Kagura", "Minami"};
+
+            for(int i = 0; i<names.length; ++i){
+                System.out.println(names[i]);
+            }
+
+            System.out.println("");
+
+            for(String a: names){
+                System.out.println(a);
+            }
+        }
+}
+
+class ArrayLoopingWithInput{
+    public static void main(String... args){
+        Scanner _inScan = new Scanner(System.in);
+
+        String []_names = new String[5];
+
+        System.out.print("Enter Name: ");
+        _names[0] = _inScan.nextLine();
+        System.out.print("Enter Name: ");
+        _names[1] = _inScan.nextLine();
+        System.out.print("Enter Name: ");
+        _names[2] = _inScan.nextLine();
+        System.out.print("Enter Name: ");
+        _names[3] = _inScan.nextLine();
+        System.out.print("Enter Name: ");
+        _names[4] = _inScan.nextLine();
+        _inScan.close();
+
+        // System.out.println("FOR LOOP");
+        // System.out.println("");
+        //  for(int i=0; i<_names.length;){
+        //      System.out.println(_names[i++]);
+        //  }
+        
+        //  System.out.println("FOR EACH");
+        // System.out.println("");
+        //  for(String name: _names){
+        //      System.out.println(name);
+        //  }
+        
+        // System.out.println("WHILE LOOP");
+        // System.out.println("");
+         int i = 0;
+        // while(i<_names.length){
+        // System.out.println(_names[i++]);
+        // }
+        
+        System.out.println("DO WHILE LOOP");
+        System.out.println("");
+        do{
+            System.out.println(_names[i++]);
+            
+        }
+        while(i<_names.length);
+    }
+}
