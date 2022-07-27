@@ -228,3 +228,53 @@ class ArrayLength{
         }
     }
 }
+
+class ArrayForLoop{
+   public static void main(String... args){
+    Scanner scan = new Scanner(System.in);
+    int id[] = new int[5];
+    String name[] = new String[5];
+    double grade[] = new double[5];
+    String time[] = new String[5];
+    String status[] = new String[5];
+    //scan.close();
+
+    int i;
+    int a;
+    int b;
+    int c;
+    int d;
+    int e;
+
+    for(i = 0; i<id.length; i++){
+        System.out.print("Enter ID: ");
+        id[i] = scan.nextInt();
+     }
+    
+     scan.nextLine();
+     
+      for(b = 0; b<name.length; b++){
+        System.out.print("Enter Name: ");
+       name[b] = scan.nextLine();
+    }
+
+    for(c = 0; c<grade.length; c++){
+        System.out.print("Enter Grade: ");
+       grade[c] = scan.nextDouble();
+    }
+
+    for(d = 0; d<time.length; d++){
+        System.out.print("Enter Time: ");
+       time[d] = scan.next();
+    }
+    
+    for(e = 0; e<status.length; e++)
+    {
+      System.out.print("Enter Status: ");
+      status[e] = scan.next();
+    }
+     for(a = 0; a<i; a++){
+     System.out.println("ID#: " + id[a] + "\nName: " + name[a] + "\nGrade: " + grade[a] + "\nTime: " + time[a] + "\nStatus: " + status[a] + '\n');
+     }
+    } 
+}

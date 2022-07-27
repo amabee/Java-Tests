@@ -9,10 +9,10 @@ public class ConsoleCalc {
       System.out.println("Input next number: ");
       int secnum = Input.nextInt();
       System.out.println("What operator should be use?: +, -, *, or /");
-     char op = Input.next().charAt(0);
+     char operator = Input.next().charAt(0);
      Input.close();
      int result;
-      switch(op)
+      switch(operator)
       {
           case '+':
               result = frstnum + secnum;
