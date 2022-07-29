@@ -237,7 +237,6 @@ class ArrayForLoop{
     double grade[] = new double[5];
     String time[] = new String[5];
     String status[] = new String[5];
-    //scan.close();
 
     int i;
     int a;
@@ -245,7 +244,7 @@ class ArrayForLoop{
     int c;
     int d;
     int e;
-
+try{
     for(i = 0; i<id.length; i++){
         System.out.print("Enter ID: ");
         id[i] = scan.nextInt();
@@ -273,8 +272,56 @@ class ArrayForLoop{
       System.out.print("Enter Status: ");
       status[e] = scan.next();
     }
+    
      for(a = 0; a<i; a++){
-     System.out.println("ID#: " + id[a] + "\nName: " + name[a] + "\nGrade: " + grade[a] + "\nTime: " + time[a] + "\nStatus: " + status[a] + '\n');
-     }
-    } 
+     System.out.println("\nID#: " + id[a] + "\nName: " + name[a] + "\nGrade: " + grade[a] + "\nTime: " + time[a] + "\nStatus: " + status[a] + '\n');
+        }    
+    }
+   catch(Exception ex){
+    System.out.println(ex.getMessage());
+   }  
+   finally{
+    scan.close();
+   }
+  } 
+}
+
+class whileloopArray{
+   public static void main(String...args){
+
+        Scanner scammer = new Scanner(System.in);
+        int id[] = new int[5];
+        String name[] = new String[5];
+        int grade[] = new int[5];
+        
+        int a = 0;
+        int b = 0;
+        int c = 0;
+        //int d = 0;
+        int printing = 0;
+        while(a<id.length){
+            System.out.print("Enter ID: ");
+            id[a] = scammer.nextInt();
+            a++;
+        }
+
+        scammer.nextLine();
+
+        while(b<name.length){
+            System.out.print("Enter Name: ");
+            name[b] = scammer.nextLine();
+            b++;
+        }
+        while(c<grade.length){
+            System.out.print("Enter Grade: ");
+            grade[c] = scammer.nextInt();
+            c++;
+        }
+        //while()
+        while(printing<a){
+            System.out.println("\nID#: " + id[printing] + "\nName: " + name[printing] + "\nGrade: " + grade[printing]);
+            printing++;
+        }
+        scammer.close();
+    }
 }
