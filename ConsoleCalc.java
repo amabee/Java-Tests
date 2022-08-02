@@ -16,22 +16,22 @@ public class ConsoleCalc {
       {
           case '+':
               result = frstnum + secnum;
-              System.out.println(frstnum + " " + "+" + " "+ secnum + " " + "=" +" "+ result);
+              System.out.printf("%d + %d = %d" ,frstnum,secnum,result);
               break;
               
           case '-':
               result = frstnum - secnum;
-              System.out.println(frstnum + " " + "-" + " "+ secnum + " " + "=" +" "+ result);
+              System.out.printf("%d - %d = %d" ,frstnum,secnum,result);
               break;
               
           case '*':
               result = frstnum * secnum;
-              System.out.println(frstnum + " " + "*" + " "+ secnum + " " + "=" +" "+ result);
+              System.out.printf("%d * %d = %d" ,frstnum,secnum,result);
               break;
       
           case '/':
               result = frstnum / secnum;
-              System.out.println(frstnum + " " + "/" + " "+ secnum + " " + "=" +" "+ result);
+              System.out.printf("%d + %d = %d" ,frstnum,secnum,result);
               break;
       }
       
