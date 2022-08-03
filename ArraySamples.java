@@ -1,3 +1,4 @@
+
 import java.util.*;
 
 public class ArraySamples {
@@ -235,16 +236,16 @@ class ArrayForLoop{
     int id[] = new int[5];
     String name[] = new String[5];
     double grade[] = new double[5];
-    String time[] = new String[5];
     String status[] = new String[5];
-
+    String course[] = new String[5];
+    char courseSel;
     int i;
     int a;
     int b;
     int c;
     int d;
-    int e;
-try{
+    //int e;
+ try{
     for(i = 0; i<id.length; i++){
         System.out.print("Enter ID: ");
         id[i] = scan.nextInt();
@@ -260,31 +261,49 @@ try{
     for(c = 0; c<grade.length; c++){
         System.out.print("Enter Grade: ");
        grade[c] = scan.nextDouble();
-    }
+        
+       if(grade[c] < 49) {
+        status[c] = "fail";
+        }
+    else{
+        status[c] = "pass";
+        }
 
-    for(d = 0; d<time.length; d++){
-        System.out.print("Enter Time: ");
-       time[d] = scan.next();
     }
     
-    for(e = 0; e<status.length; e++)
-    {
-      System.out.print("Enter Status: ");
-      status[e] = scan.next();
+    for(d = 0; d<course.length; d++){
+        System.out.print("Enter Course. Select '0' for Information Technology '1' for BS Education '2' for Nursing & '3' if love pako nimo: ");
+        courseSel = scan.next().charAt(0);
+       switch(courseSel){
+        case '0':
+            course[d] = "Information Technology";
+            break;
+        case '1':
+            course[d] = "BS Education";
+            break;
+        case '2':
+            course[d] = "Nursing";
+            break;
+        case '3':
+            course[d] = "Uwi kana baby, miss na kita";
+            break;
+       }
     }
     
      for(a = 0; a<i; a++){
-     System.out.println("\nID#: " + id[a] + "\nName: " + name[a] + "\nGrade: " + grade[a] + "\nTime: " + time[a] + "\nStatus: " + status[a] + '\n');
+     System.out.println("\nID#: " + id[a] + "\nName: " + name[a] + "\nGrade: " + grade[a] + "\nStatus: " + status[a] + "\nCourse: " + course[a]+ '\n');
         }    
-    }
-   catch(Exception ex){
-    System.out.println(ex.getMessage());
+     }
+    catch(Exception ex){
+     System.out.println(ex.getMessage());
    }  
-   finally{
-    scan.close();
+    finally{
+     scan.close();
    }
   } 
 }
+
+
 
 class whileloopArray{
    public static void main(String...args){
@@ -325,3 +344,5 @@ class whileloopArray{
         scammer.close();
     }
 }
+
+

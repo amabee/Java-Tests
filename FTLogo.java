@@ -1,4 +1,3 @@
-import java.util.*;
 class Prog3
 {
 	public static void main(String[] args)
