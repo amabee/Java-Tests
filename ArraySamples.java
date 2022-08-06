@@ -346,3 +346,98 @@ class whileloopArray{
 }
 
 
+class ArrayWithSwitchCase{
+    public static void main(String... args){
+        
+        Scanner scan = new Scanner(System.in);
+        int ID[] = new int[5];
+        int age[] = new int[5];
+        String _name[] = new String[5];
+        String _address[] = new String[5];
+        String _ageRemarks[] = new String[5];
+        String _yrLvl[] = new String[5];
+        double grade[] = new double[5];
+        String _gradeRemarks[] = new String[5];
+        char year_Lvl;
+
+        int a,b,c,d,e,f,g;
+        try{
+        for(a = 0; a<ID.length; a++){
+            System.out.print("Enter ID#: ");
+            ID[a] = scan.nextInt();
+        }
+        for(b = 0; b<age.length; b++){
+            System.out.print("Your Age?: ");
+            age[b] = scan.nextInt();
+
+            if(age[b] > 0 && age[b] <= 17){
+                _ageRemarks[b] = "Kids";
+            }
+            else if(age[b] > 18 && age[b] <= 25){
+                _ageRemarks[b] = "Youth";
+            }
+            else if(age[b] > 26 && age[b] <= 50){
+                _ageRemarks[b] = "Adult";
+            }
+            else{
+                _ageRemarks[b] = "Senior";
+            }
+        }
+        
+        scan.nextLine();
+        
+        for(c=0; c<_name.length; c++){
+            System.out.print("Enter Name: ");
+            _name[c] = scan.nextLine();
+        }
+
+        for(d=0; d<_address.length; d++){
+            System.out.print("Enter Address: ");
+            _address[d] = scan.nextLine();
+        }
+
+        for(e=0; e<_yrLvl.length; e++){
+            System.out.print("Enter Year Level: ");
+            year_Lvl = scan.next().charAt(0);
+            switch(year_Lvl){
+                case'1':
+                _yrLvl[e] = "1st Year College";
+                break;
+
+                case'2':
+                _yrLvl[e] = "2nd Year College";
+                break;
+
+                case'3':
+                _yrLvl[e] = "3rd Year College";
+                break;
+
+                case'4':
+                _yrLvl[e] = "4th Year College";
+                break;
+
+            }  
+        }
+        for(f=0; f<grade.length; f++){
+            System.out.print("Enter Grade: ");
+            grade[f] = scan.nextDouble();
+
+            if(grade[f] < 75){
+                _gradeRemarks[f] = "You Failed Miserably. Better Luck Next Time :(";
+            }
+            else if(grade[f] >=75 && grade[f] <= 100){
+                _gradeRemarks[f] = "Congratulations! You Passed. Keep up the good work.";
+            }
+            else{
+                _gradeRemarks[f] = "There's no such grade as that dumbass.";
+            }
+         }
+         for(g=0; g<a; g++){
+            System.out.print("ID: " +ID[g]+ "\nName: " + _name[g] + "\nAge: " + age[g] + "\nAge Classification: " + _ageRemarks[g] + "\nAddress: " + _address[g] + "\nYear Level: " + _yrLvl[g] + "\nGrade: " + grade[g] + "\nGrade Remarks: " + _gradeRemarks[g] + '\n' + '\n');
+         }
+       }
+       finally{
+        scan.close();
+    }
+    }
+}
