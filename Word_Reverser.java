@@ -9,7 +9,7 @@ public class Word_Reverser {
         String word = scan.nextLine();
         scan.close();
         
-        String words[] = word.split("\\s");
+        String words[] = word.split("\s");
         String reversedString = "";
     
         for(int i=0; i<words.length; i++)
